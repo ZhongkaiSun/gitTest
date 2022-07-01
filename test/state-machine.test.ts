@@ -18,8 +18,8 @@ describe("ProcessorStack", () => {
     const template = Template.fromStack(processorStack);
 
     template.hasResourceProperties("AWS::Lambda::Function", {
-      Handler: "handler",
       Runtime: "nodejs16.x",
+      Handler: "index.handler",
     });
 
     template.resourceCountIs("AWS::SNS::Subscription", 1);
