@@ -29,9 +29,12 @@ export class ProcessorStack extends cdk.Stack {
     });
     stateMachine.grantStartExecution(func);
 
-    const subscription = new sns_subscriptions.LambdaSubscription(func);
-    for (const topic of props.topics) {
-      topic.addSubscription(subscription);
-    }
+    const a = 1;
+
+    const b = 3;
+    // const subscription = new sns_subscriptions.LambdaSubscription(func);
+    // for (const topic of props.topics) {
+    //   topic.addSubscription(subscription);
+    // }
   }
 }
