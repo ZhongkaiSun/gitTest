@@ -19,7 +19,7 @@ describe("ProcessorStack", () => {
 
     template.hasResourceProperties("AWS::Lambda::Function", {
       Handler: "handler",
-      Runtime: "nodejs14.x",
+      Runtime: "nodejs16.x",
     });
 
     template.resourceCountIs("AWS::SNS::Subscription", 1);
