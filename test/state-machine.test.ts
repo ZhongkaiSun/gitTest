@@ -18,7 +18,7 @@ describe("ProcessorStack", () => {
     const template = Template.fromStack(processorStack);
 
     template.hasResourceProperties("AWS::Lambda::Function", {
-      Handler: "handler",
+      Handler: "index.handler",
       Runtime: "nodejs14.x",
     });
 
